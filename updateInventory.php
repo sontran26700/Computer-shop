@@ -36,7 +36,7 @@
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
 					<div class="search_form">
 						<form action="customer-search.php" method="post">
-							<input type="text" name="search_box" id="search_box" placeholder="Search for a customer...">
+							<input type="text" name="search_box" id="search_box" placeholder="Tìm kiếm khách hàng...">
 						</form>
 					</div>
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
@@ -159,7 +159,7 @@
 						Description: <input type="text" name="ud_description" value="<?php echo $description; ?>" required>
 						Quantity: <input type="number" name="ud_quantity" value="<?php echo $quantity; ?>" required>
 						Price: <input type="text" name="ud_price" value="<?php echo $price; ?>" required>
-						<input type="submit" name="submit" value="Update Inventory Details">
+						<input type="submit" name="submit" value="Cập nhập Kho">
 					</form>
 					
 				</div>

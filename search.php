@@ -18,11 +18,11 @@
 				$result= mysqli_query($conn, $query);
 				
 				if (!$result) {
-					$error = "Could not connect to the database!";
+					$error = "Không thể kết nối với dữ liệu!";
 				}
 				
 				if(mysqli_num_rows($result) == 0) {
-					$error = "<ul> <li>Sorry, your search query (\"" .$name ."\") did not find any results!</li></ul>";
+					$error = "<ul> <li>Xin lỗi,  Không tìm thấy kết quả cho: (\"" .$name ."\")</li></ul>";
 				}
 				//-create  while loop and loop through result set
 				while($row = mysqli_fetch_array($result)){
@@ -34,12 +34,12 @@
 					$Sdt = $row ['Sdt'];
 					
 					//-display the result of the array
-					$customer = $customer . "<ul>\n <a  href=\"search.php?id=$ID\"> <li>" .$Ten . " " . $Ho .  " "   .$Huyen . " "   .$ThanhPho . " "   .$Sdt . "</a></li>\n\n\n\n\n</ul>";
+					$customer = $customer . "<ul>\n <a  href=\"search.php?id=$ID\"> <li>" .$Ho . " " . $Ten .  " "   .$Huyen . " "   .$ThanhPho . " "   .$Sdt . "</a></li>\n\n\n\n\n</ul>";
 				}
 				mysqli_close($conn);
 				
 				} else {
-				$error = "<ul> <li>Sorry, too many characters!</li></ul>";
+				$error = "<ul> <li>Xin lỗi, quá nhiều kí tự!</li></ul>";
 			}	//end of string lenght check	
 		} 	
 	}

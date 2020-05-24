@@ -40,7 +40,7 @@
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
 					<div class="search_form">
 						<form action="customer-search.php" method="post">
-							<input type="text" name="search_box" id="search_box" placeholder="Tìm khách hàng:">
+							<input type="text" name="search_box" id="search_box" placeholder="Tìm kiếm khách hàng...">
 						</form>
 					</div>
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
@@ -156,7 +156,7 @@
 					<form class="form-4" method="post" action="updateRepair.php">	
 						<p>Nhập ID sửa chữa:</p> <br>
 						<input type="number" name="record" placeholder="Enter ID number e.g. 1" min="1" maxlength="10" required>
-						<input type="submit" name="go" value="Go to update >>">	
+						<input type="submit" name="go" value="Đi đến cập nhập >>">	
 						</form>
 					
 				</div>

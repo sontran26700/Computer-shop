@@ -27,7 +27,7 @@
 		
 		
 		if ( is_numeric($price) ) {
-			$query = "SELECT * FROM stock WHERE description = '$description'";
+			$query = "SELECT * FROM Kho WHERE description = '$description'";
 			$valid = mysqli_query($conn, $query);
 			
 			if (!$valid) {
@@ -35,7 +35,7 @@
 			}
 			
 			if (mysqli_num_rows($valid) == 0 ) {
-				$sql = "INSERT INTO stock (description, quantity, price)
+				$sql = "INSERT INTO Kho (description, quantity, price)
 				VALUES ('$description', '$quantity', '$price');";
 				$res = mysqli_query($conn, $sql);
 				
@@ -44,19 +44,19 @@
 				}
 				
 				if (mysqli_affected_rows($conn) == 1) {
-					$success =  "New item has been added successfully to the inventory. Redirecting.....";
+					$success =  "Sản phẩm mới đã được thêm vào kho thành công. Chuyển hướng...";
 					header("refresh:5; url=inventory.php");
 					
 					} else {
-					$error =  ("Could not add due to system error!");
+					$error =  ("Không thể thêm sản phẩm mới do lỗi hệ thống!");
 				}
 				
 				} else {
-				$error = "The item already exist in the system.";
+				$error = "Sản phẩm đã có trong hệ thống!";
 			}
 			
 			} else {
-			$error = "Price should be numeric!";
+			$error = "Giá phải là kiểu số!";
 		}
 		
 		mysqli_close($conn);

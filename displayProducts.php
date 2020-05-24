@@ -97,7 +97,7 @@
 					
 					if(isset($_SESSION['cart'])){
 						$conn= mysqli_connect("localhost", "root", "", "sht");
-						$sql="SELECT * FROM stock WHERE stock_id IN (";
+						$sql="SELECT * FROM Kho WHERE stock_id IN (";
 						
 						foreach($_SESSION['cart'] as $id => $value) {
 								$sql .= $id .",";
@@ -109,7 +109,7 @@
 						$res = mysqli_query($conn, $sql);
 						
 						if (!$res) {
-							printf("<h2>Basket is empty.</h2> %s", "<br><strong>Please choose your products from the left!<strong>"); //mysqli_error($conn)
+							printf("<h2>Basket is empty.</h2> %s", "<br><strong>Vui lòng chọn sản phẩm ở phía bên trái!<strong>"); //mysqli_error($conn)
 							exit();
 						}
 						
@@ -127,7 +127,7 @@
 						
 						}else{
 						
-						echo "<p>Your Cart is empty. Please add some products.</p>";
+						echo "<p>Giỏ hàng của bạn trống. Vui lòng chọn sản phẩm.</p>";
 						
 					}
 					

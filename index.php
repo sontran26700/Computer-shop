@@ -26,10 +26,10 @@
 					<h1>Đăng Nhập / <span class="reg"><a href="register.php">Đăng Kí</a></span></h1>
 					<span id="error"><?php echo $error; ?></span>
 					<label for="login">Tài Khoản</label>
-					<input type="text" name="username" placeholder="Tai Khoan" autofocus required>
+					<input type="text" name="Taikhoan" placeholder="Tai Khoan" autofocus required>
 					
-					<label for="password">Mật Khẩu</label>
-					<input type="password" name="password" placeholder="Mat Khau" required> 
+					<label for="Matkhau">Mật Khẩu</label>
+					<input type="password" name="Matkhau" placeholder="Mat Khau" required> 
 					
 					<input type="submit" name="submit" value="Đăng Nhập">
 					

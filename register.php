@@ -36,19 +36,19 @@
 						<input type="text" name="email" placeholder="Email" required>
 						
 						<label for="town">Huyện</label>
-						<input type="text" name="town" placeholder="Town">
+						<input type="text" name="town" placeholder="Huyện/Quận">
 						
 						<label for="county">Thành Phố</label>
-						<input type="text" name="county" placeholder="County">
+						<input type="text" name="county" placeholder="Thành Phố">
 						
 						<label for="telephone">Sđt</label>
-						<input type="text" name="telephone" placeholder="Telephone/Mobile">
+						<input type="text" name="telephone" placeholder="Sđt">
 						
 						<label for="login">Tài Khoản</label>
-						<input type="text" name="username" placeholder="Username" required>
+						<input type="text" name="username" placeholder="Tài Khoản" required>
 					
 						<label for="password">Mật Khẩu</label>
-						<input type="password" name="password" placeholder="Password" required> 
+						<input type="password" name="password" placeholder="Mật Khẩu" required> 
 
 						<input type="submit" name="submit" value="Register">
 					     

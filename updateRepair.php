@@ -37,7 +37,7 @@
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
 					<div class="search_form">
 						<form action="customer-search.php" method="post">
-							<input type="text" name="search_box" id="search_box" placeholder="Search for a customer...">
+							<input type="text" name="search_box" id="search_box" placeholder="Tìm kiếm khách hàng...">
 						</form>
 					</div>
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
@@ -165,7 +165,7 @@
 						Operating System: <?php echo enumDropdown("repairs", "OS", "ud_os"); ?>
 						Description: <textarea rows="5" name="ud_description" required><?php echo $description; ?></textarea>
 						Status: <?php echo enumDropdown("repairs", "Status", "ud_status"); ?>
-						<input type="submit" name="submit" value="Update Repair Details">
+						<input type="submit" name="submit" value="Cập nhập chi tiết sửa chữa">
 						
 					</form>
 					

@@ -1,5 +1,5 @@
 <?php
-	date_default_timezone_set('Europe/Dublin');
+	date_default_timezone_set('Asia/Ho_Chi_Minh');
 	//include database connection
 	$conn= mysqli_connect("localhost", "root", "", "sht");
 	if (!$conn) {
@@ -48,7 +48,7 @@
 			]);
 			
 			var options = {
-				title: '<?php echo "FROM " .date('01 F Y')  ." until " .date('h:i:s a', time()) ." NOW."?>',
+				title: '<?php echo "Từ ngày " .date('01 F Y')  ." cho đến " .date('h:i:s a', time()) ." hiện tại:"?>',
 				is3D: 'true',
 				pieSliceText: 'value',
 				slices: {  7: {offset: 0.2},
@@ -58,7 +58,7 @@
 			};
 			// Create and draw the visualization.
 			new google.visualization.PieChart(document.getElementById('pie_chart')).
-			// {title:"<?php echo "FROM " .date('01 F Y')  ." until " .date('h:i:s a', time()) ." NOW."?>"}
+			// {title:"<?php echo "Từ ngày " .date('01 F Y')  ." cho đến " .date('h:i:s a', time()) ."hiện tại."?>"}
 			draw(data, options);
 		}
 		

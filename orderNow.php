@@ -56,7 +56,7 @@
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
 					<div class="search_form">
 						<form action="customer-search.php" method="post">
-							<input type="text" name="search_box" id="search_box" placeholder="Search for a customer...">
+							<input type="text" name="search_box" id="search_box" placeholder="Tìm kiếm khách hàng...">
 						</form>
 					</div>
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
@@ -176,7 +176,7 @@
 					</span>
 					<form class="form-4" action="" method="post">
 						
-						Repair ID: <input type="text" name="rep_id" placeholder="Repair ID Isn't valid, redirecting..." value="<?php echo $repair; ?>" readonly>
+						Repair ID: <input type="text" name="rep_id" placeholder="ID sửa chữa không hợp lệ, Đang chuyển hướng...." value="<?php echo $repair; ?>" readonly>
 					    
 						<table>
 							<tr>
@@ -187,7 +187,7 @@
 							</tr>
 							<?php
 								$conn= mysqli_connect("localhost", "root", "", "sht");
-								$sql="SELECT * FROM stock WHERE stock_id IN (";
+								$sql="SELECT * FROM Kho WHERE stock_id IN (";
 								
 								foreach($_SESSION['cart'] as $id => $value) {	
 									$sql .= $id .",";

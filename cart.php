@@ -16,7 +16,7 @@
 	}
 ?>
 <h1>View cart</h1>
-<a href="chooseProducts.php?page=products">Go back to products page</a>
+<a href="chooseProducts.php?page=products">Trở lại trang sản phẩm</a>
 <form method="post" action="chooseProducts.php?page=cart">
 	
     <table>
@@ -30,7 +30,7 @@
 		
         <?php
 			$conn= mysqli_connect("localhost", "root", "", "sht");
-            $sql="SELECT * FROM stock WHERE stock_id IN (";
+            $sql="SELECT * FROM Kho WHERE stock_id IN (";
 			
 			foreach($_SESSION['cart'] as $id => $value) {	
 				$sql .= $id .",";
@@ -42,7 +42,7 @@
 			
 			$res = mysqli_query($conn, $sql);
 			if (!$res) {
-				printf("Nothing in the basket: %s\n", "Go back");
+				printf("Không có gì trong giỏ hàng: %s\n", "Go back");
 				exit();
 			}
 			
@@ -62,7 +62,7 @@
 			}
 		?>
 		<tr>
-			<td colspan="4">Total Price: <?php echo '&euro;'. $totalprice ?></td>
+			<td colspan="4">Tổng giá: <?php echo '&euro;'. $totalprice ?></td>
 		</tr>
 		
 	</table>
@@ -70,4 +70,4 @@
     <button type="submit" name="submit">Update Cart</button>
 </form>
 <br />
-<p>To remove an item, set it's quantity to 0. </p>
+<p>Để xóa sản phẩm, vui lòng chọn quantity là số 0 </p>

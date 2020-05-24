@@ -16,7 +16,7 @@
 				die("Connection failed: " . mysqli_connect_error());
 			}
 			
-            $sql_s="SELECT * FROM stock
+            $sql_s="SELECT * FROM Kho
 			WHERE stock_id ={$id}";
             //$query_s=mysql_query($sql_s);
 			$res = mysqli_query($conn, $sql_s);
@@ -32,7 +32,7 @@
 				
 				} else {
 				
-                $message="This product id is invalid!";
+                $message="Sản phẩm không hợp lệ!";
 				
 			}
 			// Free result set
@@ -66,7 +66,7 @@
 			die("Connection failed: " . mysqli_connect_error());
 		}
 		
-		$sql="SELECT * FROM stock ORDER BY stock_id ASC";
+		$sql="SELECT * FROM Kho ORDER BY stock_id ASC";
 		$res = mysqli_query($conn, $sql);
 		//$result2 = mysql_query($sql) or die($sql."<br/><br/>".mysql_error());
 		

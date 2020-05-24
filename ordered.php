@@ -27,7 +27,7 @@
 			$ord_id = mysqli_insert_id($ordcnx);
 			
 			//RETRIEVE THE ITEMS FROM THE SESSION
-			$sql="SELECT * FROM stock WHERE stock_id IN (";
+			$sql="SELECT * FROM Kho WHERE stock_id IN (";
 			
 			foreach($_SESSION['cart'] as $id => $value) {	
 				$sql .= $id .",";

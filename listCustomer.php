@@ -10,7 +10,7 @@
 	$result = mysqli_query($conn, $query);	
 	
 	if (!$result) {
-		$error = "No customer was found in the database!";
+		$error = "Không tìm thấy khách hàng trong database!";
 	}
 	
 	while($data = mysqli_fetch_row($result)) {

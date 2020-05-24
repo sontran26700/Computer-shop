@@ -50,19 +50,19 @@
 				}
 				
 				if (mysqli_affected_rows($conn) == 1) {
-					$success =  "Customer created successfully. Redirecting.....";
+					$success =  "Khách hàng đã được tạo thành công. Đang chuyển hướng....";
 					header("refresh:5; url=customer.php");
 					
 					} else {
-					$error =  ("Could not register due to system error!");
+					$error =  ("Không thể tạo do lỗi hệ thống!");
 				}
 				
 				} else {
-				$error = "The customer already exist in the system.";
+				$error = "Khách hàng đã có trong hệ thống.";
 			}
 			
 			} else {
-			$error = "Sdtephone number should numeric!";
+			$error = "Số điện thoại phải là kiểu số!";
 		}
 		
 		mysqli_close($conn);

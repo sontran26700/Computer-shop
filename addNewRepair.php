@@ -57,17 +57,17 @@
 			}
 			
 			if (mysqli_affected_rows($conn) == 1) {
-				$success =  "Repair added successfully. Redirecting.....<br><br>";
+				$success =  "Sửa chữa đã thêm thành công. Đang chuyển hướng.....<br><br>";
 				$id = $cust_id;
 				//header("refresh:5; url=repairs.php");
 				
 				} else {
-				$notFound =  "Could not add due to system error!<br><br>";
+				$notFound =  "Không thể thêm sửa chữa do lỗi hệ thống!<br><br>";
 			}
 			
 			} else {
 			$id = $cust_id;
-			$notFound = "Customer wasn't found in the system. Please go back and enter a valid customer ID <br><br>";
+			$notFound = "Khách hàng không được tìm thấy trong hệ thống. Vui lòng trở lại và nhập đúng ID khách hàng! <br><br>";
 		}
 		mysqli_close($conn);
 	}

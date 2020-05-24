@@ -41,7 +41,7 @@
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
 					<div class="search_form">
 						<form action="customer-search.php" method="post">
-							<input type="text" name="search_box" id="search_box" placeholder="Search a customer...">
+							<input type="text" name="search_box" id="search_box" placeholder="Tìm kiếm khách hàng...">
 						</form>
 					</div>
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->

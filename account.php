@@ -40,7 +40,7 @@
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
 					<div class="search_form">
 						<form action="customer-search.php" method="post">
-							<input type="text" name="search_box" id="search_box" placeholder="Search for a customer...">
+							<input type="text" name="search_box" id="search_box" placeholder="Tìm kiếm khách hàng...">
 						</form>
 					</div>
 					<!-- Search Bar by http://www.paulund.co.uk/create-a-slide-out-search-box -->
@@ -158,7 +158,7 @@
 							die("Connection failed: " . mysqli_connect_error());
 						}
 						
-						$query = "SELECT * FROM staff WHERE staff_id = $login_id";
+						$query = "SELECT * FROM NhanVien WHERE Nv_id = $login_id";
 						
 						$result= mysqli_query($conn, $query);
 						
@@ -171,18 +171,18 @@
 						}
 						//-create  while loop and loop through result set
 						while($row = mysqli_fetch_array($result)){
-							$ID = $row['staff_id'];
-							$firstname  =$row['forename'];
-							$lastname=$row['surname'];
-							$town = $row['town'];
-							$county = $row['county'];
-							$tel = $row ['tel'];
+							$ID = $row['Nv_id'];
+							$firstname  =$row['Ten'];
+							$lastname=$row['Ho'];
+							$town = $row['Huyen'];
+							$county = $row['Thanhpho'];
+							$tel = $row ['Sdt'];
 							
 							//-display the result of the array
 							$staff = "<ul><h1><li>" .$firstname . " " . $lastname .  "</li><li> "   .$town . "</li><li> "   .$county . "</li><li> "   .$tel . "</li></h1></ul>";
 							echo $staff;
 						}
-						mysqli_close($conn);
+						mysqli_close($conn);	
 
 				?>
 				
